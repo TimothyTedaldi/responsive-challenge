@@ -23,31 +23,30 @@
     font-weight: normal;
     font-style: normal;
 }
+/*  
+    
 
-/* Eléments principaux de la page */
-
+*/
+/* Eléments principaux de la page en 900px et +*/
 body
-{
+{   
     background: url('images/fond_jaune.png');
     font-family: 'Trebuchet MS', Arial, sans-serif;
     color: #181818;
 }
-
 #bloc_page
 {
-    width: 900px;
     margin: auto;
 }
-
 section h1, footer h1, nav a
-{
-    font-family: Dayrom, serif;
-    font-weight: normal;
-    text-transform: uppercase;
-}
+    {
+        font-family: Dayrom, serif;
+        font-weight: normal;
+        text-transform: uppercase;
+    }
 
 /* Header */
-
+   
 header
 {
     background: url('images/separateur.png') repeat-x bottom;
@@ -55,6 +54,7 @@ header
     justify-content: space-between;
     align-items: flex-end;
 }
+
 
 #titre_principal
 {
@@ -117,7 +117,6 @@ nav a:hover
     color: #760001;
     border-bottom: 3px solid #760001;
 }
-
 /* Bannière */
 
 #banniere_image
@@ -167,69 +166,55 @@ nav a:hover
     border: 0;
 }
 
-/* Corps */
-
-section
-{
-    display: flex;
-    margin-bottom: 20px;
-}
-
-article, aside
-{
-    text-align: justify;
-}
-
 article
 {
     margin-right: 20px;
     flex: 3;
 }
-
 .ico_categorie
 {
     vertical-align: middle;
     margin-right: 8px;
 }
-
 article p
 {
     font-size: 0.8em;
 }
-
 aside
-{
-    flex: 1.2;
-    position: relative;
-    background-color: #706b64;
-    box-shadow: 0px 2px 5px #1c1a19;
-    border-radius: 5px;
-    padding: 10px;
-    color: white;
-    font-size: 0.9em;
-}
+    {
+        flex: 1.2;
+        position: relative;
+        width: 100%;
+        background-color: #706b64;
+        box-shadow: 0px 2px 5px #1c1a19;
+        
+        border-radius: 5px;
+        padding: 10px;
+        color: white;
+        font-size: 0.9em;
+    }
+    #fleche_bulle
+    {
+        position: absolute;
+        top: 100px;
+        left: -12px;
+    }
 
-#fleche_bulle
-{
-    position: absolute;
-    top: 100px;
-    left: -12px;
-}
+    #photo_zozor
+    {
+        text-align: center;
+    }
 
-#photo_zozor
-{
-    text-align: center;
-}
+    #photo_zozor img
+    {
+        border: 1px solid #181818;
+    }
 
-#photo_zozor img
-{
-    border: 1px solid #181818;
-}
+    aside img
+    {
+        margin-right: 5px;
+    }
 
-aside img
-{
-    margin-right: 5px;
-}
 
 /* Footer */
 
@@ -250,22 +235,6 @@ footer h1
     font-size: 1.1em;
 }
 
-
-#tweet
-{
-    width: 28%;
-}
-
-#mes_photos
-{
-    width: 35%;
-}
-
-#mes_amis
-{
-    width: 31%;
-}
-
 #mes_photos img
 {
     border: 1px solid #181818;
@@ -282,11 +251,101 @@ footer h1
 #mes_amis ul
 {
     list-style-image: url('images/ico_liensexterne.png');
-    padding-left: 2px;
 }
 
 #mes_amis a
 {
     text-decoration: none;
     color: #760001;
+}
+
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+}
+article {
+    display: inline-block;
+    text-align: justify;
+    width: 100%;
+}
+aside {
+    display: inline-block;
+    text-align: justify;
+}
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+}
+#tweet
+{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+#mes_photos
+{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+#mes_amis
+{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+header{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+@media only screen and (min-width: 900px) {
+    section
+    {
+        margin-bottom: 20px;
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+    footer{
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+    header{
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+    nav ul{
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+    #tweet
+    {
+        width: 28%;
+    }
+
+    #mes_photos
+    {
+        width: 35%;
+    }
+
+    #mes_amis
+    {
+        width: 31%;
+    }
+    #banniere_image{
+        width: 100%;
+    }
 }
