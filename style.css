@@ -312,7 +312,7 @@ nav ul{
     flex-wrap: wrap;
     flex-direction: column;
 }
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 768px) and (max-width: 1000px){
     section
     {
         margin-bottom: 20px;
@@ -347,5 +347,53 @@ nav ul{
     }
     #banniere_image{
         width: 100%;
+    }
+}
+@media only screen and (min-width: 1000px) {
+    section
+    {
+        margin-bottom: 20px;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        margin-left: auto;
+        margin-right: auto;
+        width: 900px;
+    }
+    footer{
+        flex-wrap: nowrap;
+        flex-direction: row;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    header{
+        flex-wrap: nowrap;
+        flex-direction: row;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    nav ul{
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+    #tweet
+    {
+        width: 28%;
+    }
+
+    #mes_photos
+    {
+        width: 35%;
+    }
+
+    #mes_amis
+    {
+        width: 31%;
+    }
+    #banniere_image{
+        width: 900px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
